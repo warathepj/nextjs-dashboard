@@ -7,11 +7,16 @@
    
   export default function NavLinks() {
     const pathname = usePathname();
+    const links = [
+      { name: 'Home', href: '/' }, // Example link
+      { name: 'About', href: '/about' }, // Add your actual links here
+      // ... add more links as needed
+    ];
 
     return (
       <>
         {links.map((link) => {
-          const LinkIcon = link.icon;
+          // const LinkIcon = link.icon;
           return (
             <Link
               key={link.name}
@@ -23,7 +28,7 @@
                 },
               )}
             >
-              <LinkIcon className="w-6" />
+              {/* <LinkIcon className="w-6" /> */}
               <p className="hidden md:block">{link.name}</p>
             </Link>
           );
